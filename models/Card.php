@@ -8,12 +8,14 @@ class Card
     private $name_brand;
     private $name_product;
     private $price_product;
+    private $category;
 
-    public function __construct(Product $card, /* Animal $animal */)
+    public function __construct(Product $card, array $category = [])
     {
         $this->setNameBrand($card);
         $this->setNameProduct($card);
         $this->setPriceProduct($card);
+        $this->category = $category;
     }
 
     public function getNameBrand()

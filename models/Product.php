@@ -7,12 +7,11 @@ class Product
     private $price;
     private $type;
 
-    public function __construct($name, $brand, $price, $type)
+    public function __construct($name, $brand, $price)
     {
         $this->setName($name);
         $this->setBrand($brand);
         $this->setPrice($price);
-        $this->setType($type);
     }
     public function getName()
     {
@@ -42,15 +41,5 @@ class Product
     private function setPrice($price)
     {
         $this->price = $price;
-    }
-
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    private function setType($type)
-    {
-        $this->type = $type;
     }
 }
